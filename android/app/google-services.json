@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "900157190561",
+    "project_id": "pharmadeal-app",
+    "storage_bucket": "pharmadeal-app.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:900157190561:android:eeb3a8102d4b662eb61be0",
+        "android_client_info": {
+          "package_name": "com.govind.medicine.pharmadeal"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAQOn3y6V6xD7KWK8EZMPgZtS2jDGmBUQU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:900157190561:android:196cc82f9d97afc2b61be0",
+        "android_client_info": {
+          "package_name": "com.govindmedicine.app"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAQOn3y6V6xD7KWK8EZMPgZtS2jDGmBUQU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -2,6 +2,7 @@
 
 import 'dart:async';
 import 'dart:developer';
+import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/widgets.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
@@ -11,6 +12,8 @@ import 'package:pharmadeal/core/local_storage/app_storage_pod.dart';
 import 'package:pharmadeal/init.dart';
 import 'package:pharmadeal/shared/riverpod_ext/riverpod_observer.dart';
 import 'package:talker_flutter/talker_flutter.dart';
+
+import 'firebase_options.dart';
 
 // coverage:ignore-file
 
@@ -46,6 +49,9 @@ Future<void> bootstrap(
     log(details.exceptionAsString(), stackTrace: details.stack);
   };
   WidgetsFlutterBinding.ensureInitialized();
+  await Firebase.initializeApp(
+    options: DefaultFirebaseOptions.currentPlatform,
+  );
   unawaited(init());
   await Hive.initFlutter();
   final appBox = await Hive.openBox('appBox');

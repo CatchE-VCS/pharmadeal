@@ -1,4 +1,5 @@
 import 'package:auto_route/annotations.dart';
+import 'package:auto_route/auto_route.dart';
 import 'package:flutter/material.dart';
 
 @RoutePage(
@@ -9,6 +10,36 @@ class SplashPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Placeholder();
+    Future.delayed(Duration(seconds: 2), ()=> context.router.pushNamed('/auth'));
+    return const SafeArea(
+        child: Scaffold(
+          backgroundColor: Color(0xff2f585a),
+          body: Center(
+            child: Column(
+              mainAxisSize: MainAxisSize.min,
+              children: [
+                Text(
+                  'GOVIND',
+                  style: TextStyle(
+                    fontFamily: "Poppins",
+                    fontSize: 30,
+                    color: Colors.white,
+                    fontWeight: FontWeight.bold
+                  ),
+                ),
+                Text(
+                  '- MARKET -',
+                  style: TextStyle(
+                    fontFamily: "Poppins",
+                    fontSize: 30,
+                    color: Colors.white,
+                    fontWeight: FontWeight.bold
+                  ),
+                )
+              ],
+            )
+          )
+        ),
+    );
   }
 }
